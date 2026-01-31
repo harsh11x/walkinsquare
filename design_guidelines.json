@@ -1,0 +1,129 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "WalkInSquare",
+      "tone": "Aggressive, Monolithic, High-Finance, Brutalist Luxury",
+      "core_values": ["Power", "Scale", "Dominance", "Precision"],
+      "aesthetic": "The 'Gotham City' Developer. Dark, moody, sharp edges, massive typography. No soft curves. No friendly gradients."
+    },
+    "typography": {
+      "font_family": {
+        "heading": "Oswald, sans-serif",
+        "body": "DM Sans, sans-serif",
+        "accent": "JetBrains Mono, monospace"
+      },
+      "scale": {
+        "hero": "text-7xl md:text-9xl font-bold tracking-tighter uppercase leading-[0.8]",
+        "h1": "text-5xl md:text-7xl font-bold tracking-tight uppercase",
+        "h2": "text-4xl md:text-6xl font-medium tracking-tight uppercase",
+        "h3": "text-2xl md:text-3xl font-medium uppercase tracking-widest",
+        "body_lg": "text-lg md:text-xl font-light tracking-wide leading-relaxed",
+        "body": "text-base font-light tracking-wide leading-relaxed",
+        "label": "text-xs font-mono uppercase tracking-[0.2em] text-muted-foreground"
+      },
+      "rules": [
+        "HEADINGS MUST BE UPPERCASE. No sentence case for titles.",
+        "Use 'Oswald' for all headings to create vertical rhythm.",
+        "Use 'JetBrains Mono' for small labels, stats, and technical details.",
+        "Line height for headings must be tight (0.8 to 0.9).",
+        "Kerning (tracking) must be tight for headings (-0.05em) and wide for labels (0.2em)."
+      ]
+    },
+    "colors": {
+      "palette": {
+        "background": "#050505",
+        "foreground": "#EDEDED",
+        "card": "#0A0A0A",
+        "card_foreground": "#FFFFFF",
+        "primary": "#FFFFFF",
+        "primary_foreground": "#000000",
+        "secondary": "#1A1A1A",
+        "secondary_foreground": "#FFFFFF",
+        "muted": "#262626",
+        "muted_foreground": "#737373",
+        "accent": "#FF3333",
+        "accent_foreground": "#FFFFFF",
+        "border": "#262626",
+        "input": "#262626",
+        "ring": "#FF3333"
+      },
+      "usage": {
+        "background": "Deepest Obsidian (#050505). Never pure black.",
+        "text": "Off-white (#EDEDED) for main text. Dark Grey (#737373) for secondary.",
+        "brand_accent": "Signal Red (#FF3333). Use SPARINGLY. Only for the most critical CTA or a single pixel line.",
+        "borders": "Dark Grey (#262626). The UI is defined by borders, not backgrounds."
+      }
+    },
+    "layout": {
+      "grid_system": "The 'Bento' Grid - Mode A (Tetris). Asymmetrical. 12-column base.",
+      "spacing": {
+        "container_padding": "px-4 md:px-8 lg:px-12",
+        "section_padding": "py-24 md:py-32",
+        "element_gap": "gap-8 md:gap-12"
+      },
+      "borders": "1px solid border-border. No rounded corners (rounded-none).",
+      "containers": "Sharp edges. No shadows. Depth is created by borders and opacity, not drop-shadows."
+    },
+    "components": {
+      "buttons": {
+        "primary": "bg-white text-black hover:bg-accent hover:text-white rounded-none uppercase font-bold tracking-widest px-8 py-4 transition-all duration-300 border border-white hover:border-accent",
+        "secondary": "bg-transparent text-white border border-white/20 hover:border-white hover:bg-white hover:text-black rounded-none uppercase font-bold tracking-widest px-8 py-4 transition-all duration-300",
+        "ghost": "text-muted-foreground hover:text-white uppercase tracking-widest text-sm"
+      },
+      "cards": {
+        "style": "bg-card border border-border p-8 rounded-none hover:border-white/50 transition-colors duration-500 group relative overflow-hidden",
+        "hover_effect": "No lift. Border color change only. Maybe a subtle inner glow."
+      },
+      "inputs": {
+        "style": "bg-transparent border-b border-border focus:border-white rounded-none px-0 py-4 text-xl placeholder:text-muted-foreground/50 focus:ring-0 focus:outline-none transition-colors"
+      }
+    },
+    "visual_enhancers": {
+      "texture": "Add a subtle noise/grain overlay (opacity 0.03) to the entire body to kill the digital flatness.",
+      "lines": "Use vertical lines (1px border-l border-white/5) running through the entire page height to create a 'grid' feel.",
+      "motion": {
+        "scroll": "Use Lenis for smooth scrolling.",
+        "reveal": "Text reveal animations (staggered slide-up). Images reveal with a 'curtain' effect (block uncovers image).",
+        "hover": "Images go from grayscale to color on hover. Text turns from outline to solid."
+      }
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1759590029882-2cea786619c1?q=85&w=1920&auto=format&fit=crop",
+      "about_architecture": "https://images.unsplash.com/photo-1651420952022-2d2e666e87df?q=85&w=1000&auto=format&fit=crop",
+      "outlets": [
+        {
+          "url": "https://images.unsplash.com/photo-1758633854740-26967a7d18f9?q=85&w=800&auto=format&fit=crop",
+          "alt": "Luxury Storefront Night"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1764779169348-353c6d99dbd0?q=85&w=800&auto=format&fit=crop",
+          "alt": "Bright Retail Interior"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1761052676626-a3e49f178804?q=85&w=800&auto=format&fit=crop",
+          "alt": "Street Shopping"
+        }
+      ],
+      "crowd": "https://images.unsplash.com/photo-1597419698238-8a09f898e8e9?q=85&w=1000&auto=format&fit=crop"
+    },
+    "icons": "Use 'lucide-react'. Style: Thin stroke (1.5px). Sharp angles if possible."
+  },
+  "implementation_plan": {
+    "step_1_setup": "Install 'lenis' for smooth scroll. Install 'framer-motion'. Configure Tailwind with new colors and fonts.",
+    "step_2_global": "Apply dark theme globally. Add noise texture. Add global grid lines.",
+    "step_3_hero": "Build Hero. Full height. Background image with heavy dark overlay (bg-black/60). Text: 'WALK. IN. SQUARE.' centered or bottom-left. Massive size.",
+    "step_4_stats": "Ticker style stats. '50 OUTLETS'. '12 OPERATIONAL'. '38 UPCOMING'. Use JetBrains Mono.",
+    "step_5_outlets": "Grid layout. Mix of 'Running' (Bright, clear) and 'Upcoming' (Dimmed, mysterious, 'Coming Soon' overlay).",
+    "step_6_contact": "Minimalist form. Big inputs. No borders except bottom.",
+    "step_7_footer": "Massive footer. Big typography links."
+  },
+  "universal_guidelines": [
+    "DO NOT use rounded corners. This brand is sharp.",
+    "DO NOT use gradients. Use solid colors and transparency.",
+    "DO NOT use 'Inter'. Use 'Oswald' for headers, 'DM Sans' for body.",
+    "Ensure high contrast. Text must be readable on dark backgrounds.",
+    "Use 'data-testid' for all interactive elements."
+  ]
+}
