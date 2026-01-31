@@ -4,7 +4,8 @@
 .ws-container {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.25rem;
+  /* Slightly more padding on mobile */
 }
 
 @media (min-width: 768px) {
@@ -21,7 +22,8 @@
 
 /* Section */
 .ws-section {
-  padding: 6rem 0;
+  padding: 4rem 0;
+  /* Reduced from 6rem for mobile */
   position: relative;
 }
 
@@ -140,10 +142,17 @@
 .ws-card {
   background: #0A0A0A;
   border: 1px solid #262626;
-  padding: 2rem;
+  padding: 1.5rem;
+  /* Reduced from 2rem for mobile */
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .ws-card {
+    padding: 2rem;
+  }
 }
 
 .ws-card:hover {
@@ -175,11 +184,25 @@
 /* Stat number */
 .ws-stat {
   font-family: 'Oswald', sans-serif;
-  font-size: 5rem;
+  font-size: 3.5rem;
+  /* Reduced from 5rem for mobile */
   font-weight: 700;
   line-height: 1;
   color: #FFFFFF;
   letter-spacing: -0.05em;
+}
+
+@media (min-width: 400px) {
+  .ws-stat {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .ws-stat {
+    font-size: 7rem;
+    /* Restored larger size for tablet/desktop */
+  }
 }
 
 @media (min-width: 768px) {
@@ -288,8 +311,13 @@
 
 /* Marquee */
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .marquee-track {

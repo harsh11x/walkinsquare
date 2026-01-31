@@ -62,12 +62,12 @@ const Header = () => {
                 WalkInSquare
               </span>
             </a>
-            
+
             <nav className="hidden md:flex items-center gap-10" data-testid="desktop-nav">
               {navLinks.map((link) => (
-                <a 
+                <a
                   key={link.href}
-                  href={link.href} 
+                  href={link.href}
                   className="ws-nav-link"
                   data-testid={`nav-${link.label.toLowerCase()}`}
                 >
@@ -79,7 +79,7 @@ const Header = () => {
               </a>
             </nav>
 
-            <button 
+            <button
               className="md:hidden p-2 text-white"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               data-testid="mobile-menu-btn"
@@ -92,16 +92,16 @@ const Header = () => {
       </header>
 
       <div className={`mobile-menu ${mobileMenuOpen ? "open" : ""}`} data-testid="mobile-menu">
-        <button 
+        <button
           className="absolute top-6 right-6 p-2 text-white"
           onClick={() => setMobileMenuOpen(false)}
         >
           <X size={28} />
         </button>
         {navLinks.map((link) => (
-          <a 
+          <a
             key={link.href}
-            href={link.href} 
+            href={link.href}
             onClick={() => setMobileMenuOpen(false)}
             data-testid={`mobile-nav-${link.label.toLowerCase()}`}
           >
@@ -119,7 +119,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-end pb-20 md:pb-32 grid-lines" data-testid="hero-section">
       {/* Background */}
       <div className="absolute inset-0">
-        <img 
+        <img
           src="https://images.unsplash.com/photo-1759590029882-2cea786619c1?q=85&w=1920&auto=format&fit=crop"
           alt="WalkInSquare"
           className="w-full h-full object-cover opacity-40"
@@ -141,10 +141,10 @@ const HeroSection = () => {
               Premium Retail Development — Est. 2020
             </p>
           </div>
-          
+
           <div className="overflow-hidden">
-            <h1 
-              className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter uppercase leading-[0.85] animate-fade-in-up animation-delay-100"
+            <h1
+              className="text-[3.5rem] leading-[0.9] sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter uppercase animate-fade-in-up animation-delay-100"
               style={{ fontFamily: "'Oswald', sans-serif" }}
               data-testid="hero-title"
             >
@@ -154,11 +154,11 @@ const HeroSection = () => {
           </div>
 
           <div className="overflow-hidden mt-8 md:mt-12">
-            <p 
+            <p
               className="text-lg md:text-xl text-[#737373] max-w-xl leading-relaxed font-light animate-fade-in-up animation-delay-200"
               data-testid="hero-description"
             >
-              50 premium retail spaces. One iconic destination. 
+              50 premium retail spaces. One iconic destination.
               Where visionary brands build their future.
             </p>
           </div>
@@ -219,7 +219,7 @@ const AboutSection = () => {
           {/* Image */}
           <div className="relative order-2 lg:order-1">
             <div className="aspect-[4/5] overflow-hidden">
-              <img 
+              <img
                 src="https://images.unsplash.com/photo-1651420952022-2d2e666e87df?q=85&w=1000&auto=format&fit=crop"
                 alt="Architecture"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
@@ -237,8 +237,8 @@ const AboutSection = () => {
           <div className="order-1 lg:order-2">
             <div className="accent-line mb-8" />
             <p className="ws-label mb-6">The Vision</p>
-            <h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[0.9] mb-8"
+            <h2
+              className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[0.9] mb-8"
               style={{ fontFamily: "'Oswald', sans-serif" }}
               data-testid="about-title"
             >
@@ -247,15 +247,15 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-6 text-[#737373] text-lg font-light leading-relaxed">
               <p data-testid="about-description">
-                WalkInSquare isn't just another retail destination. It's a statement. 
+                WalkInSquare isn't just another retail destination. It's a statement.
                 A monolithic structure designed for brands that refuse to blend in.
               </p>
               <p>
-                Strategic positioning. Uncompromising architecture. Premium footfall. 
+                Strategic positioning. Uncompromising architecture. Premium footfall.
                 We built what others only talk about.
               </p>
               <p>
-                12 industry leaders already call this home. 38 more spaces await 
+                12 industry leaders already call this home. 38 more spaces await
                 brands ready to claim their territory.
               </p>
             </div>
@@ -288,8 +288,8 @@ const RunningOutletsSection = () => {
           <div>
             <div className="accent-line mb-8" />
             <p className="ws-label mb-4">Currently Operational</p>
-            <h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[0.9]"
+            <h2
+              className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[0.9]"
               style={{ fontFamily: "'Oswald', sans-serif" }}
               data-testid="outlets-title"
             >
@@ -313,8 +313,8 @@ const RunningOutletsSection = () => {
             ];
 
             return (
-              <div 
-                key={outlet.id} 
+              <div
+                key={outlet.id}
                 className={`ws-card glow-hover bg-[#0A0A0A] ${sizeClasses[index]}`}
                 data-testid={`outlet-${outlet.id}`}
               >
@@ -326,7 +326,7 @@ const RunningOutletsSection = () => {
                       </span>
                       <ArrowUpRight className="w-5 h-5 text-[#262626] group-hover:text-[#FF3333] transition-colors" />
                     </div>
-                    <h3 
+                    <h3
                       className="text-2xl md:text-3xl font-bold uppercase tracking-tight"
                       style={{ fontFamily: "'Oswald', sans-serif" }}
                     >
@@ -362,8 +362,8 @@ const UpcomingOutletsSection = () => {
           <div>
             <div className="accent-line mb-8" />
             <p className="ws-label mb-4">Now Leasing</p>
-            <h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[0.9]"
+            <h2
+              className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[0.9]"
               style={{ fontFamily: "'Oswald', sans-serif" }}
               data-testid="upcoming-title"
             >
@@ -378,13 +378,13 @@ const UpcomingOutletsSection = () => {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[1px] bg-[#262626]" data-testid="upcoming-outlets-grid">
           {displayedOutlets.map((outlet) => (
-            <div 
-              key={outlet.id} 
+            <div
+              key={outlet.id}
               className="ws-card-upcoming bg-[#0A0A0A] text-center"
               data-testid={`upcoming-outlet-${outlet.id}`}
             >
               <p className="ws-label text-[#FF3333]/60 mb-2">{outlet.category}</p>
-              <p 
+              <p
                 className="text-xl font-bold uppercase tracking-tight"
                 style={{ fontFamily: "'Oswald', sans-serif" }}
               >
@@ -397,7 +397,7 @@ const UpcomingOutletsSection = () => {
 
         {!showAll && (
           <div className="mt-12 text-center">
-            <button 
+            <button
               onClick={() => setShowAll(true)}
               className="ws-btn-secondary"
               data-testid="show-all-outlets-btn"
@@ -419,8 +419,8 @@ const GallerySection = () => {
         <div className="text-center mb-16">
           <div className="accent-line mx-auto mb-8" />
           <p className="ws-label mb-4">Visual Tour</p>
-          <h2 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase"
+          <h2
+            className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase"
             style={{ fontFamily: "'Oswald', sans-serif" }}
             data-testid="gallery-title"
           >
@@ -430,13 +430,13 @@ const GallerySection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-[#262626]" data-testid="gallery-grid">
           {galleryImages.map((image, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`ws-gallery-item ${index === 0 ? 'aspect-[4/5] md:aspect-[3/4]' : 'aspect-square'}`}
               data-testid={`gallery-item-${index}`}
             >
-              <img 
-                src={image} 
+              <img
+                src={image}
                 alt={`WalkInSquare ${index + 1}`}
                 className="w-full h-full object-cover"
               />
@@ -475,8 +475,8 @@ const ContactSection = () => {
           <div>
             <div className="accent-line mb-8" />
             <p className="ws-label mb-4">Let's Talk</p>
-            <h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[0.9] mb-8"
+            <h2
+              className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[0.9] mb-8"
               style={{ fontFamily: "'Oswald', sans-serif" }}
               data-testid="contact-title"
             >
@@ -484,10 +484,10 @@ const ContactSection = () => {
               <span className="text-[#737373]">Dominate?</span>
             </h2>
             <p className="text-[#737373] text-lg font-light max-w-md mb-12">
-              Spaces are filling fast. If you're serious about growth, 
+              Spaces are filling fast. If you're serious about growth,
               let's have a conversation that matters.
             </p>
-            
+
             <div className="space-y-6">
               <div className="flex items-center gap-4 group">
                 <div className="w-12 h-12 border border-[#262626] flex items-center justify-center group-hover:border-[#FF3333] group-hover:bg-[#FF3333] transition-all">
@@ -528,7 +528,7 @@ const ContactSection = () => {
             <p className="ws-label mb-8">Send A Message</p>
             <form onSubmit={handleSubmit} className="space-y-8" data-testid="contact-form">
               <div>
-                <input 
+                <input
                   type="text"
                   name="name"
                   placeholder="Your Name"
@@ -540,7 +540,7 @@ const ContactSection = () => {
                 />
               </div>
               <div>
-                <input 
+                <input
                   type="email"
                   name="email"
                   placeholder="Email Address"
@@ -552,7 +552,7 @@ const ContactSection = () => {
                 />
               </div>
               <div>
-                <input 
+                <input
                   type="text"
                   name="company"
                   placeholder="Company / Brand"
@@ -563,7 +563,7 @@ const ContactSection = () => {
                 />
               </div>
               <div>
-                <textarea 
+                <textarea
                   name="message"
                   placeholder="Your Message"
                   value={formData.message}
@@ -592,8 +592,8 @@ const Footer = () => {
       <div className="ws-container">
         {/* Top - Big brand */}
         <div className="mb-16 md:mb-24">
-          <h3 
-            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter uppercase leading-[0.9]"
+          <h3
+            className="text-4xl md:text-7xl lg:text-8xl font-bold tracking-tighter uppercase leading-[0.9]"
             style={{ fontFamily: "'Oswald', sans-serif" }}
           >
             Walk<span className="text-[#FF3333]">.</span>In<span className="text-[#FF3333]">.</span>Square<span className="text-[#FF3333]">.</span>
